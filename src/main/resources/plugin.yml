@@ -1,0 +1,8 @@
+name: SAOSemente
+version: ${project.version}
+main: br.com.nation.saosemente.SAOSemente
+api-version: 1.13
+prefix: Semente
+authors: [Wizard]
+description: Semente do servidor SAO Nation.
+website: www.saonation.enjin.com
