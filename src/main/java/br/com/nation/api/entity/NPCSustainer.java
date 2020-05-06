@@ -1,14 +1,12 @@
 package br.com.nation.api.entity;
 
 import br.com.nation.api.entity.trait.TraitCommon;
+import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
-import org.bukkit.entity.NPC;
 
 import java.util.function.Function;
 
 public abstract class NPCSustainer {
-
-    public abstract String getName();
 
     public abstract TraitCommon getTrait();
 
