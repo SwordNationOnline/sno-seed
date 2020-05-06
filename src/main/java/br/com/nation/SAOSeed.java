@@ -13,15 +13,29 @@ public final class SAOSeed extends JavaPlugin {
     }
 
     private final SeedAPI seedAPI = new WSeedAPI();
+    private final String[] message = {
+            " ",
+            " ============================== ",
+            "  §bSemente inicializada com sucesso!",
+            "  §bTodos os prototipos foram adaptados.",
+            " ============================== ",
+            " "
+    };
 
     @Override
     public void onEnable() {
         Bukkit.getServicesManager().register(SeedAPI.class, seedAPI, this, ServicePriority.Lowest);
+
+        seedAPI.getRegistry().getGroups().getList().forEach(group -> Bukkit.getPluginManager().registerEvents(group.getListener(), this));
+        seedAPI.getRegistry().getProfessions().getList().forEach(profession -> profession.getAbilitys().forEach(ability -> Bukkit.getPluginManager().registerEvents(ability.getListener(), this)));
+
+        for(String message : message) {
+            Bukkit.broadcastMessage(message);
+        }
     }
-
-
 
     @Override
     public void onDisable() {
+
     }
 }

@@ -12,14 +12,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class WNBTProvider implements NBTProvider {
 
-    private static WNBTProvider wnbtProvider;
-
-    public static WNBTProvider getInstance() {
-        if(wnbtProvider == null) wnbtProvider = new WNBTProvider();
-
-        return wnbtProvider;
-    }
-
     @Override
     public NBTTagCompound find(Entity entity) {
         net.minecraft.server.v1_12_R1.Entity craftEntity = ((CraftEntity) entity).getHandle();

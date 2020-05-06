@@ -5,15 +5,14 @@ import br.com.nation.sdk.json.serializer.JSONSerializer;
 
 public class JSONProvider {
 
-    private static JSONProvider jsonProvider;
+    private final JSONSerializer jsonSerializer = new JSONSerializer();
+    private final JSONDeserializer jsonDeserializer = new JSONDeserializer();
 
-    public static JSONProvider getInstance() {
-        if(jsonProvider == null) jsonProvider = new JSONProvider();
-
-        return jsonProvider;
+    public JSONDeserializer getDeserializer() {
+        return jsonDeserializer;
     }
 
-    public final static JSONSerializer JSON_SERIALIZER = new JSONSerializer();
-    public final static JSONDeserializer JSON_DESERIALIZER = new JSONDeserializer();
-
+    public JSONSerializer getSerializer() {
+        return jsonSerializer;
+    }
 }

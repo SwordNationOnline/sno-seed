@@ -1,7 +1,7 @@
-package br.com.nation.api.inventory;
+package br.com.nation.sdk.inventory;
 
-import br.com.nation.api.inventory.size.InventorySize;
-import br.com.nation.api.inventory.wrapper.InventoryWrapper;
+import br.com.nation.sdk.inventory.size.InventorySize;
+import br.com.nation.sdk.inventory.wrapper.InventoryWrapper;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

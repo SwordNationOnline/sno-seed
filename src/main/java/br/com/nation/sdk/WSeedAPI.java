@@ -11,23 +11,28 @@ import br.com.nation.sdk.title.WTitleProvider;
 
 public class WSeedAPI implements SeedAPI {
 
+    private final JSONProvider jsonProvider = new JSONProvider();
+    private final TitleProvider wTitleProvider = new WTitleProvider();
+    private final NBTProvider nbtProvider = new WNBTProvider();
+    private final SeedRegistry seedRegistry = new WSeedRegistry();
+
     @Override
     public JSONProvider getJSONProvider() {
-        return JSONProvider.getInstance();
+        return jsonProvider;
     }
 
     @Override
     public TitleProvider getTitleProvider() {
-        return WTitleProvider.getInstance();
+        return wTitleProvider;
     }
 
     @Override
     public NBTProvider getNBTProvider() {
-        return WNBTProvider.getInstance();
+        return nbtProvider;
     }
 
     @Override
     public SeedRegistry getRegistry() {
-        return WSeedRegistry.getInstance();
+        return seedRegistry;
     }
 }

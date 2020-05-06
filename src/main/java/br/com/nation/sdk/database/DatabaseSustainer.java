@@ -1,4 +1,4 @@
-package br.com.nation.api.database;
+package br.com.nation.sdk.database;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

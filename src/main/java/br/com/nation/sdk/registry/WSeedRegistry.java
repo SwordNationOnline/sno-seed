@@ -14,14 +14,6 @@ import java.util.UUID;
 
 public class WSeedRegistry implements SeedRegistry {
 
-    private static WSeedRegistry wSeedRegistry;
-
-    public static WSeedRegistry getInstance() {
-        if(wSeedRegistry == null) wSeedRegistry = new WSeedRegistry();
-
-        return wSeedRegistry;
-    }
-
     private final Manager<Profession, String> professionManager = new ProfissionManager();
     private final Manager<Group, String> groupManager = new GroupManager();
     private final Repository<UUID, Humanoid> humanoidRepository = new HumanoidRepository();

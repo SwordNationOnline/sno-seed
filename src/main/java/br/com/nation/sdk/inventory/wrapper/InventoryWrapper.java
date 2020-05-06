@@ -1,6 +1,6 @@
-package br.com.nation.api.inventory.wrapper;
+package br.com.nation.sdk.inventory.wrapper;
 
-import br.com.nation.api.inventory.InventorySustainer;
+import br.com.nation.sdk.inventory.InventorySustainer;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 

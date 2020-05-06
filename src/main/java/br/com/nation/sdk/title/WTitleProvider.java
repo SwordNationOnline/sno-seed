@@ -12,14 +12,6 @@ import org.bukkit.entity.Player;
 
 public class WTitleProvider implements TitleProvider {
 
-    private static WTitleProvider wTitleProvider;
-
-    public static WTitleProvider getInstance() {
-        if(wTitleProvider == null) wTitleProvider = new WTitleProvider();
-
-        return wTitleProvider;
-    }
-
     @Override
     public void sendTitle(TitleType titleType, Player player, String message) {
         switch (titleType) {

@@ -1,4 +1,4 @@
-package br.com.nation.api.inventory.size;
+package br.com.nation.sdk.inventory.size;
 
 public enum InventorySize {
     ONE_LINE(9),
