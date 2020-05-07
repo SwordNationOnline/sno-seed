@@ -17,4 +17,13 @@ public enum InventorySize {
     public Integer getSlots() {
         return slots;
     }
+
+    public static InventorySize fromSlot(int slot) {
+        for(InventorySize inventorySize : values()) {
+            if(inventorySize.getSlots() == slot) {
+                return inventorySize;
+            }
+        } return null;
+    }
+
 }

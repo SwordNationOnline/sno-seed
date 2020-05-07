@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
@@ -72,6 +74,29 @@ public abstract class InventorySustainer {
 
                 interactService.apply(event);
             }
+
+            @EventHandler(priority = EventPriority.LOW)
+            private void onShow(InventoryOpenEvent event) {
+                Inventory inventory = event.getInventory();
+
+                if (!(inventory.getHolder() instanceof InventoryWrapper)) return;
+
+                InventoryWrapper wrapper = (InventoryWrapper) inventory.getHolder();
+
+                if(wrapper.getShow() != null) wrapper.getShow().apply(event);
+            }
+
+            @EventHandler(priority = EventPriority.LOW)
+            private void onHide(InventoryCloseEvent event) {
+                Inventory inventory = event.getInventory();
+
+                if (!(inventory.getHolder() instanceof InventoryWrapper)) return;
+
+                InventoryWrapper wrapper = (InventoryWrapper) inventory.getHolder();
+
+                if(wrapper.getHide() != null) wrapper.getHide().apply(event);
+            }
+
         }, plugin);
     }
 
