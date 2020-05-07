@@ -15,4 +15,5 @@ public class JSONProvider {
     public JSONSerializer getSerializer() {
         return jsonSerializer;
     }
+
 }

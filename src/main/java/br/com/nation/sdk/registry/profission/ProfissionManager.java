@@ -27,10 +27,12 @@ public class ProfissionManager implements Manager<Profession, String> {
 
     @Override
     public Profession find(String uniqueID) {
-        for(Profession profession : professionList) {
-            if(profession.getName().equalsIgnoreCase(uniqueID)) {
+        for (Profession profession : professionList) {
+            if (profession.getName().equalsIgnoreCase(uniqueID)) {
                 return profession;
             }
-        } return null;
+        }
+        return null;
     }
+
 }

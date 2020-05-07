@@ -11,10 +11,10 @@ public enum InventorySize {
     private final Integer slots;
 
     InventorySize(Integer slots) {
-            this.slots = slots;
-        }
+        this.slots = slots;
+    }
 
     public Integer getSlots() {
-            return slots;
-        }
+        return slots;
+    }
 }

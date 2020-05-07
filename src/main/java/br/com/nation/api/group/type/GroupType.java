@@ -17,11 +17,12 @@ public enum GroupType {
     }
 
     public static GroupType fromName(String name) {
-        for(GroupType groupType : values()) {
-            if(groupType.getName().equalsIgnoreCase(name)) {
+        for (GroupType groupType : values()) {
+            if (groupType.getName().equalsIgnoreCase(name)) {
                 return groupType;
             }
-        } return null;
+        }
+        return null;
     }
 
 }

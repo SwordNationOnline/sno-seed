@@ -32,4 +32,5 @@ public class WSeedRegistry implements SeedRegistry {
     public Repository<UUID, Humanoid> getHumanoids() {
         return humanoidRepository;
     }
+
 }

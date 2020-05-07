@@ -1,8 +1,8 @@
 name: SAOSemente
 version: ${project.version}
-main: br.com.nation.saosemente.SAOSemente
+main: br.com.nation.SAOSeed
 api-version: 1.13
 prefix: Semente
-authors: [Wizard]
+authors: [Wizard, Henry_Fabio]
 description: Semente do servidor SAO Nation.
 website: www.saonation.enjin.com

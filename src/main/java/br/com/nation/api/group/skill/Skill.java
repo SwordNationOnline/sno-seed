@@ -21,7 +21,9 @@ public interface Skill {
     Function<Humanoid, SkillService> getService();
 
     interface SkillService {
+
         void apply(Humanoid humanoid);
+
     }
 
     enum SkillType {
@@ -29,7 +31,7 @@ public interface Skill {
         DEFENSE,
         ATTRIBUTE,
         TELEPORT,
-        SPEED;
+        SPEED
     }
 
 }

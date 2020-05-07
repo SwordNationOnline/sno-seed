@@ -30,4 +30,5 @@ public class HumanoidRepository implements Repository<UUID, Humanoid> {
     public Humanoid find(UUID key) {
         return humanoidMap.get(key);
     }
+
 }
