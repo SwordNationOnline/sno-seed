@@ -10,19 +10,20 @@ public class InventoryWrapper implements InventoryHolder {
     private final InventorySustainer sustainer;
 
     public InventoryWrapper(InventorySustainer sustainer) {
-            this.sustainer = sustainer;
-        }
+        this.sustainer = sustainer;
+    }
 
     public InventorySustainer getSustainer() {
-            return sustainer;
-        }
+        return sustainer;
+    }
 
     @Override
     public Inventory getInventory() {
-            return inventory;
-        }
+        return inventory;
+    }
 
     public void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
+
 }

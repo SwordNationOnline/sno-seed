@@ -15,7 +15,8 @@ public class JSONDeserializer {
             return gson.fromJson(new FileReader(file), clazz);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } return null;
+        }
+        return null;
     }
 
     public <T> Object deserialize(String text, Class<T> clazz) {

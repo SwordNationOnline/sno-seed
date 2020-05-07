@@ -27,10 +27,12 @@ public class GroupManager implements Manager<Group, String> {
 
     @Override
     public Group find(String uniqueID) {
-        for(Group group : groupList) {
-            if(group.getName().equalsIgnoreCase(uniqueID)) {
+        for (Group group : groupList) {
+            if (group.getName().equalsIgnoreCase(uniqueID)) {
                 return group;
             }
-        } return null;
+        }
+        return null;
     }
+
 }

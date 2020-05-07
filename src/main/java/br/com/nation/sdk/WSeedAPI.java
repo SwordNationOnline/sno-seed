@@ -4,6 +4,7 @@ import br.com.nation.api.SeedAPI;
 import br.com.nation.api.nbt.NBTProvider;
 import br.com.nation.api.registry.SeedRegistry;
 import br.com.nation.api.title.TitleProvider;
+import br.com.nation.sdk.database.DatabaseProvider;
 import br.com.nation.sdk.json.JSONProvider;
 import br.com.nation.sdk.nbt.WNBTProvider;
 import br.com.nation.sdk.registry.WSeedRegistry;
@@ -15,6 +16,7 @@ public class WSeedAPI implements SeedAPI {
     private final TitleProvider wTitleProvider = new WTitleProvider();
     private final NBTProvider nbtProvider = new WNBTProvider();
     private final SeedRegistry seedRegistry = new WSeedRegistry();
+    private final DatabaseProvider databaseProvider = new DatabaseProvider();
 
     @Override
     public JSONProvider getJSONProvider() {
@@ -35,4 +37,10 @@ public class WSeedAPI implements SeedAPI {
     public SeedRegistry getRegistry() {
         return seedRegistry;
     }
+
+    @Override
+    public DatabaseProvider getDatabaseProvider() {
+        return databaseProvider;
+    }
+
 }

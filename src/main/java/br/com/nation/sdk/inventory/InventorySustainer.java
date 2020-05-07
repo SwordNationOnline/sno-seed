@@ -21,7 +21,8 @@ public abstract class InventorySustainer {
     private final InventoryWrapper inventoryWrapper;
 
     public InventorySustainer(String nameInventory, InventorySize inventorySize) {
-        this.nameInventory = nameInventory; this.inventorySize = inventorySize;
+        this.nameInventory = nameInventory;
+        this.inventorySize = inventorySize;
 
         itemStacks = new ItemStack[inventorySize.getSlots()];
         interactServices = new InteractService[inventorySize.getSlots()];
@@ -37,11 +38,14 @@ public abstract class InventorySustainer {
     }
 
     public interface InteractService {
+
         void apply(InventoryClickEvent event);
+
     }
 
     public void setItem(int slot, ItemStack itemStack, InteractService interactService) {
-        interactServices[slot] = interactService; itemStacks[slot] = itemStack;
+        interactServices[slot] = interactService;
+        itemStacks[slot] = itemStack;
     }
 
     public void setItem(int slot, ItemStack itemStack) {
@@ -55,15 +59,16 @@ public abstract class InventorySustainer {
             private void onInteract(InventoryClickEvent event) {
                 Inventory inventory = event.getClickedInventory();
 
-                if(!(inventory.getHolder() instanceof InventoryWrapper)) return;
+                if (!(inventory.getHolder() instanceof InventoryWrapper)) return;
 
-                event.setCancelled(true); int rawSlot = event.getRawSlot();
+                event.setCancelled(true);
+                int rawSlot = event.getRawSlot();
 
                 InventoryWrapper wrapper = (InventoryWrapper) inventory.getHolder();
 
                 InteractService interactService = wrapper.getSustainer().getServices()[rawSlot];
 
-                if(interactService == null) return;
+                if (interactService == null) return;
 
                 interactService.apply(event);
             }
@@ -75,7 +80,7 @@ public abstract class InventorySustainer {
 
         inventoryWrapper.setInventory(inventory);
 
-        for (int i = 0; i!=itemStacks.length; i++) if (itemStacks[i] != null) inventory.setItem(i, itemStacks[i]);
+        for (int i = 0; i != itemStacks.length; i++) if (itemStacks[i] != null) inventory.setItem(i, itemStacks[i]);
 
         player.openInventory(inventory);
     }

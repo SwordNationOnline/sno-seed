@@ -32,7 +32,8 @@ public class ItemBuilder {
 
         itemMetaConsumer.accept(itemMeta);
 
-        itemStack.setItemMeta(itemMeta); return this;
+        itemStack.setItemMeta(itemMeta);
+        return this;
     }
 
     public ItemBuilder name(String name) {

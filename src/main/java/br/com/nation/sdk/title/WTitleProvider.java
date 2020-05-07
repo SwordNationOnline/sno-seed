@@ -16,11 +16,14 @@ public class WTitleProvider implements TitleProvider {
     public void sendTitle(TitleType titleType, Player player, String message) {
         switch (titleType) {
             case TITLE:
-                sendTitle(titleType, player, message, " "); break;
+                sendTitle(titleType, player, message, " ");
+                break;
             case BOSS_BAR:
-                Bukkit.createBossBar(message, BarColor.BLUE, BarStyle.SEGMENTED_10, BarFlag.DARKEN_SKY); break;
+                Bukkit.createBossBar(message, BarColor.BLUE, BarStyle.SEGMENTED_10, BarFlag.DARKEN_SKY);
+                break;
             case ACTION_BAR:
-                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(message).create()); break;
+                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(message).create());
+                break;
         }
     }
 
@@ -28,14 +31,16 @@ public class WTitleProvider implements TitleProvider {
     public void sendTitle(TitleType titleType, Player player, String message, String subTitle) {
         switch (titleType) {
             case ACTION_BAR:
-                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(message + " " + subTitle).create()); break;
+                player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder(message + " " + subTitle).create());
+                break;
             case BOSS_BAR:
-                Bukkit.createBossBar(message + " " + subTitle, BarColor.BLUE, BarStyle.SEGMENTED_10); break;
+                Bukkit.createBossBar(message + " " + subTitle, BarColor.BLUE, BarStyle.SEGMENTED_10);
+                break;
             case TITLE:
-                player.sendTitle(message, subTitle, 10, 10 ,10); break;
+                player.sendTitle(message, subTitle, 10, 10, 10);
+                break;
         }
     }
-
 
 
 }
