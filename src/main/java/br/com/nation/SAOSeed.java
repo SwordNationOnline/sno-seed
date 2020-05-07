@@ -35,7 +35,7 @@ public final class SAOSeed extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        
+
     }
 
 }

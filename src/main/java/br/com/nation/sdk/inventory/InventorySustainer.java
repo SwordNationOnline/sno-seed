@@ -31,6 +31,10 @@ public abstract class InventorySustainer {
         inventoryWrapper = new InventoryWrapper(this);
     }
 
+    public InventoryWrapper getWrapper() {
+        return inventoryWrapper;
+    }
+
     public ItemStack[] getStacks() {
         return itemStacks;
     }
@@ -46,8 +50,7 @@ public abstract class InventorySustainer {
     }
 
     public void setItem(int slot, ItemStack itemStack, InteractService interactService) {
-        interactServices[slot] = interactService;
-        itemStacks[slot] = itemStack;
+        interactServices[slot] = interactService; itemStacks[slot] = itemStack;
     }
 
     public void setItem(int slot, ItemStack itemStack) {
