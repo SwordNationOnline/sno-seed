@@ -20,7 +20,7 @@ The "father of all" dependencies used on the mod/plugin creation on the Sword Na
 	<dependency>
 	    <groupId>com.github.SNO-1-12-2</groupId>
 	    <artifactId>sno-seed</artifactId>
-	    <version>1.0.0</version>
+	    <version>1.2.0</version>
 	</dependency>
 ```
 
