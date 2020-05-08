@@ -41,7 +41,7 @@ The "father of all" dependencies used on the mod/plugin creation on the Sword Na
   
 ```
 	dependencies {
-	        implementation 'com.github.SNO-1-12-2:sno-seed:1.0.0'
+	        implementation 'com.github.SNO-1-12-2:sno-seed:1.2.0'
 	}
 ```
   
