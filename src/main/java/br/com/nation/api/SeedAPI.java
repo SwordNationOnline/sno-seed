@@ -6,9 +6,9 @@ import br.com.nation.api.title.TitleProvider;
 
 public interface SeedAPI {
 
-    TitleProvider getTitleProvider();
+    TitleProvider getTitle();
 
-    NBTProvider getNBTProvider();
+    NBTProvider getNBT();
 
     SeedRegistry getRegistry();
 
