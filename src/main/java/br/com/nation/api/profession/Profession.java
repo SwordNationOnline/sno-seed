@@ -9,7 +9,7 @@ public abstract class Profession {
 
     public abstract String getName();
 
-    public abstract List<Ability> getAbilitys();
+    public abstract List<Ability> getAbilities();
 
     public abstract ItemStack getIcon();
 

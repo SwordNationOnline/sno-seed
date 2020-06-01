@@ -1,7 +1,7 @@
 package br.com.nation.api.group;
 
 import br.com.nation.api.group.skill.Skill;
-import br.com.nation.api.group.type.GroupType;
+import br.com.nation.api.group.type.Target;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 
@@ -17,6 +17,6 @@ public abstract class Group {
 
     public abstract List<Skill> getSkills();
 
-    public abstract GroupType getParent();
+    public abstract Target getTarget();
 
 }

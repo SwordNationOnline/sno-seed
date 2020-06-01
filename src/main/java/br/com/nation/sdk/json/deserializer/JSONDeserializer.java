@@ -10,7 +10,7 @@ public class JSONDeserializer {
 
     private final Gson gson = new Gson();
 
-    public <T> Object deserialize(File file, Class<T> clazz) {
+    public <T> T deserialize(File file, Class<T> clazz) {
         try {
             return gson.fromJson(new FileReader(file), clazz);
         } catch (FileNotFoundException e) {
@@ -19,7 +19,7 @@ public class JSONDeserializer {
         return null;
     }
 
-    public <T> Object deserialize(String text, Class<T> clazz) {
+    public <T> T deserialize(String text, Class<T> clazz) {
         return gson.fromJson(text, clazz);
     }
 

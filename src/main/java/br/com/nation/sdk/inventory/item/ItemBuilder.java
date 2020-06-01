@@ -1,4 +1,4 @@
-package br.com.nation.sdk.item;
+package br.com.nation.sdk.inventory.item;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

@@ -31,14 +31,6 @@ public abstract class InventorySustainer {
         inventoryWrapper = new InventoryWrapper(this);
     }
 
-    public InventoryWrapper getWrapper() {
-        return inventoryWrapper;
-    }
-
-    public ItemStack[] getStacks() {
-        return itemStacks;
-    }
-
     public InteractService[] getServices() {
         return interactServices;
     }
@@ -77,29 +69,6 @@ public abstract class InventorySustainer {
 
                 interactService.apply(event);
             }
-
-            @EventHandler(priority = EventPriority.LOW)
-            private void onShow(InventoryOpenEvent event) {
-                Inventory inventory = event.getInventory();
-
-                if (!(inventory.getHolder() instanceof InventoryWrapper)) return;
-
-                InventoryWrapper wrapper = (InventoryWrapper) inventory.getHolder();
-
-                if(wrapper.getShow() != null) wrapper.getShow().apply(event);
-            }
-
-            @EventHandler(priority = EventPriority.LOW)
-            private void onHide(InventoryCloseEvent event) {
-                Inventory inventory = event.getInventory();
-
-                if (!(inventory.getHolder() instanceof InventoryWrapper)) return;
-
-                InventoryWrapper wrapper = (InventoryWrapper) inventory.getHolder();
-
-                if(wrapper.getHide() != null) wrapper.getHide().apply(event);
-            }
-
         }, plugin);
     }
 

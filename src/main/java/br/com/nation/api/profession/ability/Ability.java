@@ -1,7 +1,10 @@
 package br.com.nation.api.profession.ability;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.function.Consumer;
 
 public interface Ability {
 
@@ -9,14 +12,8 @@ public interface Ability {
 
     Listener getListener();
 
-    AbilityType getType();
-
     ItemStack getIcon();
 
-    enum AbilityType {
-        PACIFIC,
-        NEUTRAL,
-        AGGRESSIVE,
-    }
+    Consumer<Player> onApply();
 
 }
